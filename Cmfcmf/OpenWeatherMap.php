@@ -46,32 +46,32 @@ class OpenWeatherMap
     /**
      * @var string The basic api url to fetch weather data from.
      */
-    private $weatherUrl = 'https://api.openweathermap.org/data/2.5/weather?';
+    public $weatherUrl = 'https://ru.api.openweathermap.org/data/2.5/weather?';
 
     /**
      * @var string The basic api url to fetch weather group data from.
      */
-    private $weatherGroupUrl = 'https://api.openweathermap.org/data/2.5/group?';
+    public $weatherGroupUrl = 'https://ru.api.openweathermap.org/data/2.5/group?';
 
     /**
      * @var string The basic api url to fetch weekly forecast data from.
      */
-    private $weatherHourlyForecastUrl = 'https://api.openweathermap.org/data/2.5/forecast?';
+    public $weatherHourlyForecastUrl = 'https://ru.api.openweathermap.org/data/2.5/forecast?';
 
     /**
      * @var string The basic api url to fetch daily forecast data from.
      */
-    private $weatherDailyForecastUrl = 'https://api.openweathermap.org/data/2.5/forecast/daily?';
+    public $weatherDailyForecastUrl = 'https://ru.api.openweathermap.org/data/2.5/forecast/daily?';
 
     /**
      * @var string The basic api url to fetch history weather data from.
      */
-    private $weatherHistoryUrl = 'https://history.openweathermap.org/data/2.5/history/city?';
+    public $weatherHistoryUrl = 'https://ru.history.openweathermap.org/data/2.5/history/city?';
 
     /**
      * @var string The basic api url to fetch uv index data from.
      */
-    private $uvIndexUrl = 'https://api.openweathermap.org/v3/uvi';
+    public $uvIndexUrl = 'https://ru.api.openweathermap.org/v3/uvi';
 
     /**
      * @var AbstractCache|bool $cache The cache to use.
@@ -689,7 +689,7 @@ class OpenWeatherMap
      * @return \SimpleXMLElement
      * @throws OWMException If the content isn't valid XML.
      */
-    private function parseXML($answer)
+    public function parseXML($answer)
     {
         // Disable default error handling of SimpleXML (Do not throw E_WARNINGs).
         libxml_use_internal_errors(true);
